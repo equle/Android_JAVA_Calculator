@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // 현재 입력중인 값 초기화
     public void ClearButtonClick (View view){
         activityMainBinding.resultTextView.setText("0");
         isFirstInput = true;
@@ -188,6 +189,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case "÷":
                 resultNumber /= inputNumber;
+                break;
+            case "%":
+                resultNumber %= inputNumber;
                 break;
         }
         return resultNumber;

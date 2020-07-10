@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 import pe.kr.kys.calculator.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     double inputNumber = 0;
     String operator = "=";
     String lastoperator = "＋";
-    ActivityMainBinding activityMainBinding;
+    pe.kr.kys.calculator.databinding.ActivityMainBinding
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

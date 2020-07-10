@@ -109,7 +109,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:onClick="backspaceButtonClick"
-        android:text="%"
+        android:text="C"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/num_9_button"
         app:layout_constraintEnd_toStartOf="@+id/clear_button"

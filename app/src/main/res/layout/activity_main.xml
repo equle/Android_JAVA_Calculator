@@ -66,41 +66,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="("
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/num_7_button"
-        app:layout_constraintEnd_toStartOf="@+id/right_pts_button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
-
-    <Button
-        android:id="@+id/right_pts_button"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:text=")"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/num_8_button"
-        app:layout_constraintEnd_toStartOf="@+id/percent_button"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/left_pts_button"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
-
-    <Button
-        android:id="@+id/clear_button"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:onClick="allClearButtonClick"
         android:text="AC"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/divide_button"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/num_7_button"
+        app:layout_constraintEnd_toStartOf="@+id/percent_button"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/percent_button"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <Button
@@ -108,13 +80,42 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:text="%"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/num_8_button"
+        app:layout_constraintEnd_toStartOf="@+id/Clear_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/left_pts_button"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <Button
+        android:id="@+id/backspaceButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:onClick="backspaceButtonClick"
+        android:text="←"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/divide_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Clear_button"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <Button
+        android:id="@+id/Clear_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:onClick="ClearButtonClick"
         android:text="C"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/num_9_button"
-        app:layout_constraintEnd_toStartOf="@+id/clear_button"
+        app:layout_constraintEnd_toStartOf="@+id/backspaceButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/right_pts_button"
+        app:layout_constraintStart_toEndOf="@+id/percent_button"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
     <Button
@@ -128,7 +129,7 @@
         android:text="7"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/num_4_button"
-        app:layout_constraintEnd_toStartOf="@+id/right_pts_button"
+        app:layout_constraintEnd_toStartOf="@+id/percent_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/left_pts_button" />
@@ -142,10 +143,10 @@
         android:text="8"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/num_5_button"
-        app:layout_constraintEnd_toStartOf="@+id/percent_button"
+        app:layout_constraintEnd_toStartOf="@+id/Clear_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/left_pts_button"
-        app:layout_constraintTop_toBottomOf="@+id/right_pts_button" />
+        app:layout_constraintTop_toBottomOf="@+id/percent_button" />
 
     <Button
         android:id="@+id/num_9_button"
@@ -156,10 +157,10 @@
         android:text="9"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/num_6_button"
-        app:layout_constraintEnd_toStartOf="@+id/clear_button"
+        app:layout_constraintEnd_toStartOf="@+id/backspaceButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/right_pts_button"
-        app:layout_constraintTop_toBottomOf="@+id/percent_button" />
+        app:layout_constraintStart_toEndOf="@+id/percent_button"
+        app:layout_constraintTop_toBottomOf="@+id/Clear_button" />
 
     <Button
         android:id="@+id/divide_button"
@@ -174,8 +175,8 @@
         app:layout_constraintBottom_toTopOf="@+id/times_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/percent_button"
-        app:layout_constraintTop_toBottomOf="@+id/clear_button" />
+        app:layout_constraintStart_toEndOf="@+id/Clear_button"
+        app:layout_constraintTop_toBottomOf="@+id/backspaceButton" />
 
     <Button
         android:id="@+id/num_4_button"
@@ -188,7 +189,7 @@
         android:text="4"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/num_1_button"
-        app:layout_constraintEnd_toStartOf="@+id/right_pts_button"
+        app:layout_constraintEnd_toStartOf="@+id/percent_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num_7_button" />
@@ -202,7 +203,7 @@
         android:text="5"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/num_2_button"
-        app:layout_constraintEnd_toStartOf="@+id/percent_button"
+        app:layout_constraintEnd_toStartOf="@+id/Clear_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/left_pts_button"
         app:layout_constraintTop_toBottomOf="@+id/num_8_button" />
@@ -216,9 +217,9 @@
         android:text="6"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/num_3_button"
-        app:layout_constraintEnd_toStartOf="@+id/clear_button"
+        app:layout_constraintEnd_toStartOf="@+id/backspaceButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/right_pts_button"
+        app:layout_constraintStart_toEndOf="@+id/percent_button"
         app:layout_constraintTop_toBottomOf="@+id/num_9_button" />
 
     <Button
@@ -234,7 +235,7 @@
         app:layout_constraintBottom_toTopOf="@+id/minus_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/percent_button"
+        app:layout_constraintStart_toEndOf="@+id/Clear_button"
         app:layout_constraintTop_toBottomOf="@+id/divide_button" />
 
     <Button
@@ -248,7 +249,7 @@
         android:text="1"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/num_0_button"
-        app:layout_constraintEnd_toStartOf="@+id/right_pts_button"
+        app:layout_constraintEnd_toStartOf="@+id/percent_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num_4_button" />
@@ -262,7 +263,7 @@
         android:text="2"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/point_button"
-        app:layout_constraintEnd_toStartOf="@+id/percent_button"
+        app:layout_constraintEnd_toStartOf="@+id/Clear_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/left_pts_button"
         app:layout_constraintTop_toBottomOf="@+id/num_5_button" />
@@ -276,9 +277,9 @@
         android:text="3"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/equals_button"
-        app:layout_constraintEnd_toStartOf="@+id/clear_button"
+        app:layout_constraintEnd_toStartOf="@+id/backspaceButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/right_pts_button"
+        app:layout_constraintStart_toEndOf="@+id/percent_button"
         app:layout_constraintTop_toBottomOf="@+id/num_6_button" />
 
     <Button
@@ -294,7 +295,7 @@
         app:layout_constraintBottom_toTopOf="@+id/plus_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/percent_button"
+        app:layout_constraintStart_toEndOf="@+id/Clear_button"
         app:layout_constraintTop_toBottomOf="@+id/times_button" />
 
     <Button
@@ -309,7 +310,7 @@
         android:text="0"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/right_pts_button"
+        app:layout_constraintEnd_toStartOf="@+id/percent_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/num_1_button" />
@@ -324,7 +325,7 @@
         android:text="·"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/percent_button"
+        app:layout_constraintEnd_toStartOf="@+id/Clear_button"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/left_pts_button"
         app:layout_constraintTop_toBottomOf="@+id/num_2_button" />
@@ -339,9 +340,9 @@
         android:text="＝"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/clear_button"
+        app:layout_constraintEnd_toStartOf="@+id/backspaceButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/right_pts_button"
+        app:layout_constraintStart_toEndOf="@+id/percent_button"
         app:layout_constraintTop_toBottomOf="@+id/num_3_button" />
 
     <Button
@@ -358,7 +359,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/percent_button"
+        app:layout_constraintStart_toEndOf="@+id/Clear_button"
         app:layout_constraintTop_toBottomOf="@+id/minus_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

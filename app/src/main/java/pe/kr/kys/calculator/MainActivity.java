@@ -3,6 +3,7 @@ package pe.kr.kys.calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.VerifiedInputEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -76,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
                 isFirstInput = true;
             }
         }
+    }
+
+    public void ClearButtonClick (View view){
+        activityMainBinding.resultTextView.setText("0");
+        isFirstInput = true;
     }
 
     //소수점

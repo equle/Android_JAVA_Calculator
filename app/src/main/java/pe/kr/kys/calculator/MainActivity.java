@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
     double inputNumber = 0;
     String operator = "=";
     String lastoperator = "＋";
-    pe.kr.kys.calculator.databinding.ActivityMainBinding
+    ActivityMainBinding activityMainBinding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
